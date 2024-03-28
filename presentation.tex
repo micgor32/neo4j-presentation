@@ -34,20 +34,40 @@
 % Example frame for itemize
 \begin{frame}
     \frametitle{Data model}
+    Neo4j is a \textbf{graph database}.
 
+    There are two main types of graph databases:
     \begin{itemize}
-        \item Which data model is used in the DBMS if it’s not relational? Illustrate if necessary (demo). \footfullcite{robinson2015graph} % just an example
-        \item Option three
+        \item Property graph model
+        \item RDF graph model
     \end{itemize}
 
 \end{frame}
 
 \begin{frame}
-    \frametitle{Database schema}
+    \frametitle{Property graph model}
+    In Neo4j information is organized as nodes, relationship and properties.
+\end{frame}
 
-    \begin{itemize}
-        \item Is it necessary or possible to define a database schema? How can that be done (demo)?
-    \end{itemize}
+\begin{frame}
+    \frametitle{Property graph model}
+    In Neo4j information is organized as nodes, relationship and properties.
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.4\textwidth]{pgmodel.png}
+        \caption{Example of the property graph model \footfullcite{pgmodel}}
+        \label{fig:pgmodel}
+    \end{figure}
+
+    In the property graph model, \textbf{nodes} are the \textbf{entities} in the graph.
+
+    \textbf{Relationship} provide directed, named connections between two nodes entities.
+\end{frame}
+
+\begin{frame}[containsverbatim]
+    \frametitle{Database schema}
+    placeholder for now
 \end{frame}
 
 \section{Consistency and Replication}
@@ -96,9 +116,84 @@ is maintained in the system? Can you choose?
 \begin{frame}
     \frametitle{Performance}
 
-    Compare the performance of the DBMS with other DBMSs of the same and/or different
-    types (recent diagrams, give source, state how and what exactly was measured, be critical)
+    \begin{itemize}
+        \item Compared to relational DBMS (MySQL in this case)
+        \item Compared to other NoSQL DBMS
+    \end{itemize}
+    %Compare the performance of the DBMS with other DBMSs of the same and/or different
+    %types (recent diagrams, give source, state how and what exactly was measured, be critical)
 \end{frame}
+
+\begin{frame}
+    \frametitle{Compared to MySQL}
+
+    Based on the benchmark using real-world data from Career Village, the experiment done by
+    Rodrigues et. al, showed that Neo4j was faster than MySQL in most cases, particularly in
+    pattern matching and recursive queries. However, MySQL has advantages in terms of data consistency
+    and transactional support. 
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.3\textwidth]{bench1.png}
+        \caption{Performance comparison between Neo4j and MySQL \footfullcite{mysql}}
+        \label{fig:mysqlbench}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Compared to MySQL}
+    In the benchmark the following types of queries were used:
+    \begin{itemize}
+        \item selection/search
+        \item recursion
+        \item aggregation
+        \item pattern matching
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Compared to other NoSQL DBMS (1/2)}
+    Based on the WDBench, a benchmark for graph databases focused on querying the Wikidata,
+    Neo4j was the slowest of all tested graph databases, on all types of queries. \footfullcite{wdbench}
+
+    \begin{figure}
+        \begin{minipage}{0.48\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{benchWD1.png}
+            \caption{Basic Graph Patterns queries}
+            \label{fig:bgp}
+        \end{minipage}\hfill
+        \begin{minipage}{0.48\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{benchWD2.png}
+            \caption{Optional Graph Patterns queries}
+            \label{fig:ogp}
+        \end{minipage}
+    \end{figure}
+
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Compared to other NoSQL DBMS (2/2)}
+
+    \begin{figure}
+        \begin{minipage}{0.48\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{benchWD3.png}
+            \caption{Path Patterns queries}
+            \label{fig:path}
+        \end{minipage}\hfill
+        \begin{minipage}{0.48\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{benchWD4.png}
+            \caption{Navigational Graph Patterns queries}
+            \label{fig:nav}
+        \end{minipage}
+    \end{figure}
+    
+\end{frame}
+
 
 \section{Specific use cases and bit of history}
 
