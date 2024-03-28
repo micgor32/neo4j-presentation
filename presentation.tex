@@ -8,6 +8,8 @@
 % Use the Fontys theme
 \usetheme[lang=en]{Fontys}
 
+\usepackage[backend=bibtex]{biblatex}
+\addbibresource{references.bib}
 
 
 % Title page settings
@@ -34,7 +36,7 @@
     \frametitle{Data model}
 
     \begin{itemize}
-        \item Which data model is used in the DBMS if it’s not relational? Illustrate if necessary (demo).
+        \item Which data model is used in the DBMS if it’s not relational? Illustrate if necessary (demo). \footfullcite{robinson2015graph} % just an example
         \item Option three
     \end{itemize}
 
@@ -69,7 +71,26 @@ is maintained in the system? Can you choose?
 \begin{frame}
     \frametitle{Security}
 
-    Which security features are offered by the DBMS?
+    \begin{itemize}
+        \item Schema-based Security \footfullcite{sbs}
+        \item Role-based access control \footfullcite{ac}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Schema-based Security}
+    \begin{itemize}
+        \item Protect the nodes and relationships by controling users' ability to traverse and read from different parts of the graph.
+        \item Ensures that only authorized users have access to the data they need to protect sensitive data.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Role-based access control}
+    \begin{itemize}
+        \item An approach, where you can apply restrictions to roles assigned to users at any level of granularity throughout the graph.
+        \item Simplifies the task of assigning permissions and helps ensure that your data is secure.
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
