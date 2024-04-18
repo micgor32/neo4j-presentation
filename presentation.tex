@@ -74,16 +74,20 @@
 % Example frame for URL
 \begin{frame}
     \frametitle{Consistency}
-    
-    How is the CAP theorem applied to the DBMS? What type of consistency
-is maintained in the system? Can you choose?
-
+	\begin{itemize}
+   		\item Neo4j provides strong consistency.
+		\item Neo4j employs causal consistency model.
+		\item Isn't recommended DBMS when working with WAN.
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Replication}
-
-    Describe how replication works in the DBMS.
+	\frametitle{Replication}.
+	\begin{itemize}
+		\item Raft protocol.
+		\item Leader/Follower Model.
+		\item High Availability and Fault Tolerance.
+	\end{itemize}
 \end{frame}
 
 \section{Security and Performance}
@@ -199,12 +203,21 @@ is maintained in the system? Can you choose?
 
 \begin{frame}
     \frametitle{Specific use cases}
-    For which kind of use cases is the DBMS specifically good for, and why?
+	\begin{itemize}
+		\item Recommendation Systems.
+		\item Fraud Detection.
+		\item Network and IT Operations.
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{History}
-    Provide some economic information, e.g. market share, history, and any famous case(s)
+    \frametitle{Market share and famous cases}
+    	Without specific market share numbers, with slight research it's clear that graph databases is a growing market, as enterprises recognize the value of graph analytics in providing insights.
+	\begin{itemize}
+		\item NASA - uses Neo4j to manage the assembly of the International Space Station.
+		\item eBay - uses Neo4j for real-time delivery routing, customer service, and offering personalized recommendations to its users.
+		\item Adobe - uses Neo4j to understand user behavior for better product recommendations and targeted marketing.
+	\end{itemize}
 \end{frame}
 
 \section{Demo}
