@@ -65,9 +65,23 @@
     \textbf{Relationship} provide directed, named connections between two nodes entities.
 \end{frame}
 
-\begin{frame}[containsverbatim]
-    \frametitle{Database schema}
-    placeholder for now
+\begin{frame}
+    \frametitle{Database schema 1/2}
+    \begin{itemize}
+    	\item Neo4j is \textbf{schema-less}
+    	\item Limitations can be added manually (e.g. constraints for uniqueness)
+    	\item Neo4j is just dealing with instance model directly without node predefinition 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Database schema - example 2/2}
+    You don't need to tell that \textbf{Person} node consists of specific properties, you start creating a node with label \textbf{Person} for Bob and give it all properties with values directly.
+    \newline
+    \newline
+    \begin{itemize}
+    	\item Validation is left up to you (constraints or by application).
+    \end{itemize}
 \end{frame}
 
 \section{Consistency and Replication}
@@ -85,7 +99,7 @@
 	\frametitle{Replication}.
 	\begin{itemize}
 		\item Raft protocol.\footfullcite{raft-protocol}
-		\item Leader/Follower Model.\footfullcite{leader-follower-model}
+		\item Leader/Follower Model. \footnotemark[2]
 		\item High Availability.\footfullcite{high-availability}
 	\end{itemize}
 \end{frame}
